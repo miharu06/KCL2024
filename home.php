@@ -24,7 +24,7 @@
                 <input type="search" name="searchbox" placeholder="キーワードで検索">
                 <input type="image" src="images/q.png" width="20" height="20" alt="検索" value="検索する">
             </form>
-    
+            <br>
             <h2>更新履歴</h2>
             <h4>2024/??/??：九工大工学3類の研究室が検索可能</h4>
         </center>
