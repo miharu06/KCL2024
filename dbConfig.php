@@ -1,8 +1,13 @@
-$dbName = 'mysql:host-localhost;dbname-laboratory name;charset-utf8';
-$userName = 'root';
+<?php
+    // データベース接続設定
+    $dsn = 'mysql:host=localhost;dbname=kcl2024;charset=utf8';
+    $user = 'root'; // ユーザー名
 
-try{
-    $db = new PDO($dbName, $userName);
-}catch(\Throwable $th){
+try {
+    $pdo = new PDO($dsn, $user);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo 'データベース接続失敗: ' . $e->getMessage();
     exit();
 }
+?>
