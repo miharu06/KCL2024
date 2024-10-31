@@ -49,19 +49,17 @@
     // 検索結果の表示
     if (!empty($data)) {
         echo "<center><h1>検索結果</h1></center>";
-        echo "<table style='width: 80%; margin: auto; text-align: center; border: 2px solid blue; border-collapse: collapse;'>";
+        echo "<table style='width: 80%; margin: auto; text-align: center; border: 2px solid #b1e8f7; border-collapse: collapse;'>";
         echo "<tr>
-                <th style='border: 2px solid blue;'>ID</th>
-                <th style='border: 2px solid blue;'>研究室名</th>
-                <th style='border: 2px solid blue;'>学部</th>
-                <th style='border: 2px solid blue;'>URL</th>
+                <th style='border: 2px solid #b1e8f7;'>研究室名</th>
+                <th style='border: 2px solid #b1e8f7;'>学部</th>
+                <th style='border: 2px solid #b1e8f7;'>URL</th>
             </tr>";
         foreach($data as $labo) {
             echo "<tr>
-                <td style='border: 2px solid blue;'>" . htmlspecialchars($labo['id'], ENT_QUOTES, 'UTF-8') . "</td>
-                <td style='border: 2px solid blue;'>" . htmlspecialchars($labo['labo_name'], ENT_QUOTES, 'UTF-8') . "</td>
-                <td style='border: 2px solid blue;'>" . htmlspecialchars($labo['labo_faculty'], ENT_QUOTES, 'UTF-8') . "</td>
-                <td style='border: 2px solid blue;'><a href='" . htmlspecialchars($labo['labo_url'], ENT_QUOTES, 'UTF-8') . "' target='_blank'>リンク</a></td>
+                <td style='border: 2px solid #b1e8f7;'>" . htmlspecialchars($labo['labo_name'], ENT_QUOTES, 'UTF-8') . "</td>
+                <td style='border: 2px solid #b1e8f7;'>" . htmlspecialchars($labo['labo_faculty'], ENT_QUOTES, 'UTF-8') . "</td>
+                <td style='border: 2px solid #b1e8f7;'><a href='" . htmlspecialchars($labo['labo_url'], ENT_QUOTES, 'UTF-8') . "' target='_blank'>リンク</a></td>
               </tr>";
         }
         echo "</table>";
