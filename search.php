@@ -48,6 +48,7 @@
 
     // 検索結果の表示
     if (!empty($data)) {
+        $data_number=0;
         echo "<center><h1>検索結果</h1></center>";
         echo "<table style='width: 80%; margin: auto; text-align: center; border: 2px solid #b1e8f7; border-collapse: collapse;'>";
         echo "<tr>
@@ -56,12 +57,16 @@
                 <th style='border: 2px solid #b1e8f7;'>URL</th>
             </tr>";
         foreach($data as $labo) {
+            $data_number+=1;
             echo "<tr>
                 <td style='border: 2px solid #b1e8f7;'>" . htmlspecialchars($labo['labo_name'], ENT_QUOTES, 'UTF-8') . "</td>
                 <td style='border: 2px solid #b1e8f7;'>" . htmlspecialchars($labo['labo_faculty'], ENT_QUOTES, 'UTF-8') . "</td>
                 <td style='border: 2px solid #b1e8f7;'><a href='" . htmlspecialchars($labo['labo_url'], ENT_QUOTES, 'UTF-8') . "' target='_blank'>リンク</a></td>
               </tr>";
+
         }
+        echo "<h2>$data_number 件ヒットしました</h2>";
+        
         echo "</table>";
     } else {
     echo "<center><h2>該当する結果は見つかりませんでした。</h2></center>";
